@@ -1,0 +1,54 @@
+composition:
+  _name: Custom Product Detail
+  _id: 834fd6e7-72ce-4a41-b0f5-7091a40680b5
+  _slug: black-mountain-pour-over-coffee-maker-97
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Product Detail
+    hideFromNavigation:
+      type: checkbox
+      value: true
+  slots:
+    content:
+      - _id: daa0283a-0181-4be7-bfcd-cf5886271cb2
+        type: hero
+        _pattern: 5156915c-aaea-43a3-8cc6-3b0549d645c8
+        _dataResources:
+          Content Block Content:
+            type: contentfulContentBlock
+            variables:
+              entryIds: 6i1fdFnMs0oaPnIlxNM3Qp
+      - _id: 1ba3893f-28ab-4f33-a31d-edcfac53fa7d
+        type: product
+        parameters:
+          content:
+            type: algolia-record
+            value:
+              objectIDs:
+                - '97'
+              index_name: products
+      - _id: 1c4b7a8f-1a63-450c-aa80-dfe0fc377f4c
+        type: recommendedProducts
+        parameters:
+          title:
+            type: text
+            value: Recommendations
+          products:
+            type: algolia-recommend
+            value:
+              index_name: products
+              recommendOptions:
+                objectId: '97'
+                maxRecommendations: 30
+  _overrides:
+    daa0283a-0181-4be7-bfcd-cf5886271cb2:
+      variant: ''
+      parameters:
+        title:
+          type: text
+          value: Customised Product Detail
+created: '2023-05-08T14:42:53.004505+00:00'
+modified: '2023-05-11T08:19:46.888086+00:00'
+pattern: false

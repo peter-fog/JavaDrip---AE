@@ -1,0 +1,43 @@
+id: contentfulContentBlock
+displayName: Content Block
+ttl: 30
+path: /entries
+custom:
+  include: 1
+  imagePath: image
+  allowContentTypeIds:
+    - contentBlock
+method: GET
+purgeKey: c8f0a7ea-0efe-4bbe-bbb7-0755d4c6d24f
+archetype: singleEntry
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  order:
+    type: text
+    default: ''
+    displayName: Order
+  keyword:
+    type: text
+    default: ''
+    displayName: Search Text
+  entryIds:
+    type: text
+    default: ''
+    displayName: Entry Ids
+  contentTypeId:
+    type: text
+    default: contentBlock
+    displayName: Content Type
+parameters:
+  - key: include
+    value: '1'
+  - key: sys.id[in]
+    value: ${entryIds}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: contentfulDataSource
+allowedOnComponents: []

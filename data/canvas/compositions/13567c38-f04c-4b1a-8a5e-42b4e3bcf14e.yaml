@@ -1,0 +1,106 @@
+composition:
+  _name: Promotions
+  _id: 13567c38-f04c-4b1a-8a5e-42b4e3bcf14e
+  _slug: promotions
+  type: promotionPage
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Promotion page
+  slots:
+    content:
+      - _id: 2e032c6d-fbcd-4dbe-bff5-b260a1c0c7b2
+        type: $personalization
+        slots:
+          pz:
+            - _id: e3e348c3-4f8b-4d52-9d0f-ad60f040ad28
+              type: promotion
+              _pattern: b5f03387-e256-4f35-b256-b15cf95e10ad
+              _dataResources:
+                Contentful promo:
+                  type: contentfulContentBlock
+                  variables:
+                    entryIds: 4tMW6haGq469c8wk2tualj
+                    contentTypeId: contentBlock
+            - _id: 02dc63a7-5f33-41b2-86ef-156c8ee89eb5
+              type: container
+              slots:
+                content:
+                  - _id: 967e1b2b-4d60-4f04-bd4c-f531389bc6ed
+                    type: sectionTwoColumns
+                    slots:
+                      leftContent:
+                        - _id: 1fc9b43f-2cf6-4450-83b5-187192af0233
+                          type: callToAction
+                          _pattern: 57233447-b501-4b4d-aaa1-1c9dca436ef1
+                          _dataResources:
+                            Content Block Content:
+                              type: contentfulContentBlock
+                              variables:
+                                entryIds: 4ffZtYHwQooZM5QExWRfu8
+                                contentTypeId: contentBlock
+                      rightContent:
+                        - _id: 4f100ac7-af41-47c4-9194-e3c40d02931f
+                          type: emailSignupForm
+                          parameters:
+                            title:
+                              type: text
+                              value: Sign up for JavaDrip Deals
+                            backgroundImage:
+                              type: image
+                              value: >-
+                                https://res.cloudinary.com/uniformdev/image/upload/v1657906378/JavaDrip/misc/beans_ii926v.png
+                            submitButtonText:
+                              type: text
+                              value: Sign Up
+                    parameters:
+                      columnWidths:
+                        type: select
+                        value: 1/4 - 3/4
+              parameters:
+                paddingTop:
+                  type: select
+                  value: Small
+                paddingBottom:
+                  type: select
+                  value: Small
+                backgroundType:
+                  type: select
+                  value: LightGray
+        parameters:
+          trackingEventName:
+            type: text
+            value: Promotions P13N
+      - _id: d402c1e6-b76c-437c-b80d-6b6baf188534
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: International Coffee Beans
+          products:
+            type: algolia-record
+            value:
+              objectIDs:
+                - '130'
+                - '129'
+                - '134'
+              index_name: products
+  _overrides:
+    1fc9b43f-2cf6-4450-83b5-187192af0233:
+      parameters:
+        description:
+          type: text
+          value: Get some great deals in your inbox every week
+    e3e348c3-4f8b-4d52-9d0f-ad60f040ad28:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: registeredForNewsletter
+                r: 0
+                op: '>'
+            name: 'Promotion: International Bean taster'
+created: '2023-05-19T17:28:41.185202+00:00'
+modified: '2023-05-19T17:44:08.378155+00:00'
+pattern: false

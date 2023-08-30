@@ -1,0 +1,42 @@
+composition:
+  _name: Contentful Custom Article Page
+  _id: 233d504f-00ce-4a2f-bff4-12dd43f0a343
+  _slug: uncomplicating-coffee
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Contentful Costom Article Page
+    hideFromNavigation:
+      type: checkbox
+      value: true
+  slots:
+    content:
+      - _id: bbd99706-6474-467c-9377-85d31fde4366
+        type: hero
+        _pattern: 5156915c-aaea-43a3-8cc6-3b0549d645c8
+        _dataResources:
+          Content Block Content:
+            type: contentfulContentBlock
+            variables:
+              entryIds: fb3Mzu5lE1DejGu0FuCMr
+              contentTypeId: contentBlock
+      - _id: adfc92da-7f2f-4cfc-ac8f-943e669df1d7
+        type: article
+        _pattern: 6f01849c-098b-482d-9c1b-70931ce6ab3c
+        _dataResources:
+          Article Content:
+            type: contentfulArticle
+            variables:
+              entryIds: 3kSBIGTCkkCO4ayhx8wCkL
+              contentTypeId: article
+  _overrides:
+    bbd99706-6474-467c-9377-85d31fde4366:
+      variant: centered
+      parameters:
+        title:
+          type: text
+          value: This is a custom article page
+created: '2023-05-08T14:42:52.988793+00:00'
+modified: '2023-05-11T08:19:31.913006+00:00'
+pattern: false

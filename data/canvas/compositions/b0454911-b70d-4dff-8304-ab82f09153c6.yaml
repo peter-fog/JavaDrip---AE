@@ -1,0 +1,43 @@
+composition:
+  _name: Contentstack Hero
+  _id: b0454911-b70d-4dff-8304-ab82f09153c6
+  type: hero
+  parameters:
+    image:
+      type: image
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Hero Content/entry/image
+    title:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Hero Content/entry/title
+    subtitle:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Hero Content/entry/subtitle
+  _dataResources:
+    Hero Content:
+      type: contentstackHero
+      variables:
+        query: ''
+        entry_uid: blt7a270a3b360ebde9
+        content_type_uid: content_block
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    variants: true
+    parameters:
+      image: 'yes'
+      title: 'yes'
+      subtitle: 'yes'
+      buttonCopy: 'yes'
+      buttonLink: 'yes'
+created: '2023-05-08T11:04:16.794124+00:00'
+modified: '2023-05-08T11:06:03.369832+00:00'
+pattern: true

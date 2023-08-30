@@ -1,0 +1,104 @@
+composition:
+  _name: Promotion
+  _id: 59f6269a-340a-4bef-81d3-f99a6cbc65c4
+  _slug: promotion
+  type: promotionPage
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Promotion
+  slots:
+    content:
+      - _id: c5dbfbbf-d95a-4ae6-a0cf-527af1ed236b
+        type: $personalization
+        slots:
+          pz:
+            - _id: 0330f60a-b5cd-4de6-b12a-8f5413ec666a
+              type: promotion
+              _pattern: b5f03387-e256-4f35-b256-b15cf95e10ad
+            - _id: b5b1932d-f18f-450c-b31e-08c409e3553c
+              type: container
+              slots:
+                content:
+                  - _id: ef2efd19-6e69-4d6e-ae2c-daa0bc14b3bb
+                    type: sectionTwoColumns
+                    slots:
+                      leftContent:
+                        - _id: 60b957c0-355d-4605-8f17-5f943d2c07ed
+                          type: callToAction
+                          _pattern: 57233447-b501-4b4d-aaa1-1c9dca436ef1
+                          _dataResources:
+                            Content Block Content:
+                              type: contentfulContentBlock
+                              variables:
+                                entryIds: 4ffZtYHwQooZM5QExWRfu8
+                                contentTypeId: contentBlock
+                      rightContent:
+                        - _id: bd216994-eb39-4c25-8cfd-7143310f8eaa
+                          type: emailSignupForm
+                          parameters:
+                            title:
+                              type: text
+                              value: JavaDrip Promos
+                            description:
+                              type: text
+                              value: Emails weekly
+                            backgroundImage:
+                              type: image
+                              value: >-
+                                https://res.cloudinary.com/uniformdev/image/upload/v1675157879/vNext%20Demos/Baseline/hero-2_gjqbfo.webp
+                            submitButtonText:
+                              type: text
+                              value: SIGN UP
+                    parameters:
+                      columnWidths:
+                        type: select
+                        value: 1/4 - 3/4
+                      mobileItemsOrder:
+                        type: select
+                        value: ''
+                      verticalAlignment:
+                        type: select
+                        value: items-center
+              parameters:
+                backgroundType:
+                  type: select
+                  value: White
+        parameters:
+          count:
+            type: number
+            value: '1'
+          trackingEventName:
+            type: text
+            value: CTA
+      - _id: 11ca943f-e90e-4fa1-98ff-87fafbb454f5
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Featured Products
+          products:
+            type: algolia-record
+            value:
+              objectIDs:
+                - '134'
+                - '132'
+                - '130'
+              index_name: products
+          subTitle:
+            type: text
+            value: International Taster
+  _overrides:
+    0330f60a-b5cd-4de6-b12a-8f5413ec666a:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: registeredForNewsletter
+                r: 0
+                op: '>'
+            name: 'Promotion: International Bean taster'
+created: '2023-05-17T16:17:13.120507+00:00'
+modified: '2023-05-18T21:29:09.771494+00:00'
+pattern: false

@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: algolia-hitProduct
+name: Hit Product
+icon: >-
+  https://res.cloudinary.com/uniformdev/image/upload/v1677844319/vNext%20Demos/Baseline/canvas-preview/Algolia_Hit_ibphna.png
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-05-25T19:34:30.632512+00:00'
+updated: '2023-05-25T19:49:42.536274+00:00'

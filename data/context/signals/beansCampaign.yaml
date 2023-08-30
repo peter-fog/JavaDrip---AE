@@ -1,0 +1,18 @@
+id: beansCampaign
+name: Beans Campaign
+cap: 100
+crit:
+  op: '&'
+  type: G
+  clauses:
+    - type: QS
+      match:
+        cs: true
+        op: //
+        rhs: \bbean\b
+      subtype: UTM_TAX
+      queryName: utm_campaign
+      utm_mapper_taxonomy_id: d2d0a7ae-2fb9-4739-a305-d14f3b74b4ff
+dur: p
+description: Visitor has responded to a Beans campaign
+str: 50

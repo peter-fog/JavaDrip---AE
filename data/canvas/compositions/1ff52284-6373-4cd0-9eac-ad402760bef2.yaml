@@ -1,0 +1,70 @@
+composition:
+  _name: Contentstack Articles List
+  _id: 1ff52284-6373-4cd0-9eac-ad402760bef2
+  type: articlesList
+  parameters:
+    title:
+      type: text
+      value: Articles
+  slots:
+    items:
+      - _id: 2f5dedcf-3482-4b4e-87f2-cc0f0f2f7b3e
+        type: $loop
+        slots:
+          body:
+            - _id: 15c10741-84ef-46f4-85e5-dc59eb47c82b
+              type: articleListItem
+              parameters:
+                slug:
+                  type: text
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content entries Loop Item/slug
+                title:
+                  type: text
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content entries Loop Item/title
+                content:
+                  type: json
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content entries Loop Item/content
+                thumbnail:
+                  type: image
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content entries Loop Item/thumbnail/url
+                description:
+                  type: text
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content entries Loop Item/description
+        _dataResources:
+          Articles Content entries Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: /Articles Content/entries
+  _dataResources:
+    Articles Content:
+      type: contentstackArticlesQuery
+      variables:
+        asc: ''
+        desc: ''
+        limit: '5'
+        query: '{ "title": { "$regex": "", "$options": "i" } }'
+        keyword: ''
+        content_type_uid: article
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      title: 'yes'
+created: '2023-05-08T11:01:29.328305+00:00'
+modified: '2023-05-08T11:02:46.533368+00:00'
+pattern: true

@@ -1,0 +1,92 @@
+composition:
+  _name: Coffee Makers
+  _id: f798db7c-ad3c-4689-89d1-f1f9c13655d3
+  _slug: /shop/coffee-makers
+  type: page
+  parameters:
+    $enr:
+      type: $enr
+      value:
+        - cat: '2'
+          key: '1'
+          str: 10
+    pageMetaTitle:
+      type: text
+      value: Buy Coffee Maker
+    pageMetaDescription:
+      type: text
+      value: Buy Coffee Maker
+  slots:
+    content:
+      - _id: d61fe252-41f3-40e4-9f59-71ff95bd65f5
+        type: hero
+        _pattern: 5156915c-aaea-43a3-8cc6-3b0549d645c8
+        _dataResources:
+          Content Block Content:
+            type: contentfulContentBlock
+            variables:
+              entryIds: 6i1fdFnMs0oaPnIlxNM3Qp
+      - _id: 78711abe-d669-4947-be67-ea43c07e68be
+        type: algolia-instantSearch
+        slots:
+          widgets:
+            - _id: 7905621e-a9df-4153-9638-c75a1f5bd36c
+              type: algolia-searchBox
+              parameters:
+                searchBoxParams:
+                  type: algolia-components
+                  value:
+                    searchBoxProps:
+                      placeholder: Search by keyword or product
+                      searchAsYouType: true
+            - _id: a1383b34-a79c-45a5-a391-f408e61f82a0
+              type: sectionTwoColumns
+              slots:
+                leftContent:
+                  - _id: d9b91e9f-057f-4c31-81b8-17dae63f2321
+                    type: algolia-refinementList
+                    parameters:
+                      refinementListParams:
+                        type: algolia-components
+                        value:
+                          refinementListProps:
+                            limit: 10
+                            operator: and
+                            showMore: false
+                            attribute: subCategories
+                            searchable: false
+                            allowedIndex: products
+                            escapeFacetValues: true
+                rightContent:
+                  - _id: 0aef9a4b-705a-4722-900b-dfe4f257b21e
+                    type: algolia-hits
+                    slots:
+                      hitComponent:
+                        - _id: 41878aee-457a-4e30-8b80-e5bf4c3fe89c
+                          type: algolia-hitProduct
+              parameters:
+                columnWidths:
+                  type: select
+                  value: 1/4 - 3/4
+                mobileItemsOrder:
+                  type: select
+                  value: order-first
+                verticalAlignment:
+                  type: select
+                  value: items-start
+        parameters:
+          rootCategory:
+            type: select
+            value: Coffee Makers
+          instantSearchParams:
+            type: algolia-components
+            value:
+              instantSearchProps:
+                indexName: products
+                stalledSearchDelay: 200
+  _overrides:
+    d61fe252-41f3-40e4-9f59-71ff95bd65f5:
+      variant: centered
+created: '2023-04-12T17:15:05.519471+00:00'
+modified: '2023-05-18T21:40:01.725987+00:00'
+pattern: false

@@ -1,0 +1,35 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.configPath": ".prettierrc.js",
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "search.exclude": {
+    "node_modules": true
+  },
+  "cSpell.words": [
+    "acumin",
+    "algoliasearch",
+    "bigcommerce",
+    "Callout",
+    "cloudinary",
+    "COMMERCETOOLS",
+    "commitlint",
+    "contentful",
+    "Contentstack",
+    "ctfassets",
+    "Gtag",
+    "hocs",
+    "instantsearch",
+    "manypkg",
+    "nextjs",
+    "outro",
+    "picocolors",
+    "promts",
+    "Saionaro",
+    "tailwindcss",
+    "tsup",
+    "uniformdev",
+    "unoptimized"
+  ]
+}

@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: productDetailPage
+name: Product Detail Page
+icon: file-document
+parameters:
+  - id: pageMetaTitle
+    name: Page Meta Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: pageMetaDescription
+    name: Page Meta Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+  - id: hideFromNavigation
+    name: Hide From Navigation
+    type: checkbox
+    helpText: >-
+      Hide page from navigation. If you change this value, you must save the
+      composition before the change will be visible in Canvas.
+    typeConfig: null
+  - id: hideHeader
+    name: Hide Header
+    type: checkbox
+    helpText: Hide header on this page
+    typeConfig: null
+  - id: hideFooter
+    name: Hide Footer
+    type: checkbox
+    helpText: Hide footer on this page
+    typeConfig: null
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents:
+      - container
+      - $p:39c49905-1c66-45c2-a4fa-5003f6ec53df
+      - $p:57233447-b501-4b4d-aaa1-1c9dca436ef1
+      - $p:5156915c-aaea-43a3-8cc6-3b0549d645c8
+      - featuredProducts
+      - algolia-instantSearch
+      - product
+      - recommendedProducts
+      - sectionTwoColumns
+      - $p:b5f03387-e256-4f35-b256-b15cf95e10ad
+      - $personalization
+      - promotionAI
+      - $p:dd8edbfa-aef6-42c4-9fd9-2a4793432531
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+canBeComposition: true
+created: '2023-05-25T19:48:37.43517+00:00'
+updated: '2023-05-25T19:49:44.224686+00:00'

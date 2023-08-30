@@ -1,0 +1,42 @@
+composition:
+  _name: Product Detail (Template)
+  _id: c2c62ac5-72c1-4e00-907d-2e4299c5a791
+  _slug: product-slug
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Product Detail
+    hideFromNavigation:
+      type: checkbox
+      value: true
+    pageMetaDescription:
+      type: text
+      value: Fake Commerce Product Detail
+  slots:
+    content:
+      - _id: fac1310b-de8b-487b-9b63-33418eb27298
+        type: product
+        parameters:
+          content:
+            type: algolia-record
+            value:
+              objectIDs:
+                - '126'
+              index_name: products
+      - _id: a7238f07-0c0f-4732-87c0-eddc6018bb61
+        type: recommendedProducts
+        parameters:
+          title:
+            type: text
+            value: Recommendations for you
+          products:
+            type: algolia-recommend
+            value:
+              index_name: products
+              recommendOptions:
+                objectId: '97'
+                maxRecommendations: 5
+created: '2023-05-08T14:42:54.163721+00:00'
+modified: '2023-05-11T08:20:32.620779+00:00'
+pattern: false

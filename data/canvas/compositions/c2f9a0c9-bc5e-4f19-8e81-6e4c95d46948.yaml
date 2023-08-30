@@ -1,0 +1,107 @@
+composition:
+  _name: Promotions
+  _id: c2f9a0c9-bc5e-4f19-8e81-6e4c95d46948
+  _slug: promotions
+  type: promotionPage
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Promotion page
+  slots:
+    content:
+      - _id: 8919cccc-f6c2-4cb3-92d4-75ee4a0480cd
+        type: $personalization
+        slots:
+          pz:
+            - _id: 88dc764a-37c9-43a2-93a6-097539218590
+              type: promotion
+              _pattern: b5f03387-e256-4f35-b256-b15cf95e10ad
+              _dataResources:
+                Contentful promo:
+                  type: contentfulContentBlock
+                  variables:
+                    entryIds: 4tMW6haGq469c8wk2tualj
+                    contentTypeId: contentBlock
+            - _id: cb5e102d-fb38-4d5f-a331-c0596297a56a
+              type: container
+              slots:
+                content:
+                  - _id: 477e4599-8833-4ebd-a7c4-9c2230cd546c
+                    type: sectionTwoColumns
+                    slots:
+                      leftContent:
+                        - _id: aac7e603-154d-44a3-b6ea-025f8006c2ae
+                          type: callToAction
+                          _pattern: 57233447-b501-4b4d-aaa1-1c9dca436ef1
+                          _dataResources:
+                            Content Block Content:
+                              type: contentfulContentBlock
+                              variables:
+                                entryIds: 4tMW6haGq469c8wk2tualj
+                                contentTypeId: contentBlock
+                      rightContent:
+                        - _id: d2b70b64-5341-4d3b-b1af-e59bd4e7cd7d
+                          type: emailSignupForm
+                          parameters:
+                            title:
+                              type: text
+                              value: Great Deals
+                            backgroundImage:
+                              type: image
+                              value: >-
+                                https://res.cloudinary.com/uniformdev/image/upload/v1657906378/JavaDrip/misc/beans_ii926v.png
+                            submitButtonText:
+                              type: text
+                              value: Sign me Up
+                    parameters:
+                      columnWidths:
+                        type: select
+                        value: 1/3 - 2/3
+                      verticalAlignment:
+                        type: select
+                        value: items-center
+              parameters:
+                paddingTop:
+                  type: select
+                  value: Small
+                paddingBottom:
+                  type: select
+                  value: Small
+                backgroundType:
+                  type: select
+                  value: LightGray
+        parameters:
+          trackingEventName:
+            type: text
+            value: Promos P13N
+      - _id: ffe1e53a-1a23-4dc9-99dd-8d2d8cc50bea
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Featured Products
+          products:
+            type: algolia-record
+            value:
+              objectIDs:
+                - '80'
+                - '134'
+                - '133'
+              index_name: products
+          showAddToCart:
+            type: checkbox
+            value: true
+  _overrides:
+    88dc764a-37c9-43a2-93a6-097539218590:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: registeredForNewsletter
+                r: 0
+                op: '>'
+            name: 'Promotion: International Bean taster'
+created: '2023-05-23T18:40:44.399149+00:00'
+modified: '2023-05-23T19:02:22.542676+00:00'
+pattern: false

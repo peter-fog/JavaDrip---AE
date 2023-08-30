@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: recommendedProducts
+name: Recommended Products
+icon: >-
+  https://res.cloudinary.com/uniformdev/image/upload/v1675425482/vNext%20Demos/Baseline/canvas-preview/Related_Products_e3na3e.png
+parameters:
+  - id: products
+    name: Product Recommendations
+    type: algolia-recommend
+    helpText: >-
+      We will use selected product as default to display in template. In your
+      real PDP we will show recommendation for real product 
+    typeConfig:
+      allowedIndex: products
+      titleFieldName: name
+      imageUrlFieldName: thumbnailImage
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: subTitle
+    name: Sub Title
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+  - id: buttonCopy
+    name: Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: buttonLink
+    name: Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: showAddToCart
+    name: Show Add to Cart
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-05-25T19:37:52.140152+00:00'
+updated: '2023-05-25T19:49:44.222344+00:00'
+variants:
+  - id: dark
+    name: Dark

@@ -1,0 +1,40 @@
+composition:
+  _name: Custom Article Page
+  _id: c0227c51-efb0-45b5-a48a-2494d5ef119e
+  _slug: how-to-find-the-perfect-cup-without-leaving-your-home
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Custom Article Page
+    hideFromNavigation:
+      type: checkbox
+      value: true
+  slots:
+    content:
+      - _id: f449b0f5-83e4-48b0-88d7-800fcd2cf4e5
+        type: hero
+        _pattern: 5156915c-aaea-43a3-8cc6-3b0549d645c8
+        _dataResources:
+          Content Block Content:
+            type: contentfulContentBlock
+            variables:
+              entryIds: 6i1fdFnMs0oaPnIlxNM3Qp
+      - _id: 4cc57bfd-c1f7-499b-951e-c667839db746
+        type: article
+        _pattern: 6f01849c-098b-482d-9c1b-70931ce6ab3c
+        _dataResources:
+          Article Content:
+            type: contentfulArticle
+            variables:
+              entryIds: p9cRDL4wnVWieFwMYX4NL
+  _overrides:
+    f449b0f5-83e4-48b0-88d7-800fcd2cf4e5:
+      variant: centered
+      parameters:
+        title:
+          type: text
+          value: This is a custom article
+created: '2023-05-08T14:42:53.632739+00:00'
+modified: '2023-05-11T08:20:09.005315+00:00'
+pattern: false

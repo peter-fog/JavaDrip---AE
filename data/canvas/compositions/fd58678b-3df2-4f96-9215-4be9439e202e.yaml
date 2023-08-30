@@ -1,0 +1,54 @@
+composition:
+  _name: Articles
+  _id: fd58678b-3df2-4f96-9215-4be9439e202e
+  _slug: articles
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Articles
+    pageMetaDescription:
+      type: text
+      value: Articles
+  slots:
+    content:
+      - _id: 21d7df7b-ab9b-4726-b6cf-596211d53a50
+        type: articlesList
+        _pattern: 39c49905-1c66-45c2-a4fa-5003f6ec53df
+        _dataResources:
+          Articles Content:
+            type: contentfulArticles
+            variables:
+              limit: '6'
+              order: ''
+              keyword: ''
+              sortOrder: asc
+              sortFieldId: ''
+              contentTypeId: article
+      - _id: 28eea1b0-a232-42d6-8218-32e3ef472c06
+        type: articlesList
+        _pattern: 1ff52284-6373-4cd0-9eac-ad402760bef2
+        _dataResources:
+          Articles Content:
+            type: contentstackArticlesQuery
+            variables:
+              asc: ''
+              desc: ''
+              limit: '6'
+              query: '{ "title": { "$regex": "", "$options": "i" } }'
+              keyword: ''
+              content_type_uid: article
+  _overrides:
+    21d7df7b-ab9b-4726-b6cf-596211d53a50:
+      parameters:
+        title:
+          type: text
+          value: Contentful Articles
+    28eea1b0-a232-42d6-8218-32e3ef472c06:
+      parameters:
+        title:
+          type: text
+          value: Contentstack Articles
+created: '2023-04-13T06:59:41.087341+00:00'
+modified: '2023-05-08T11:41:35.346166+00:00'
+pattern: false

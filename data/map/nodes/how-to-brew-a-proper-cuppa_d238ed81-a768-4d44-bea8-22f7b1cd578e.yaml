@@ -1,0 +1,9 @@
+id: d238ed81-a768-4d44-bea8-22f7b1cd578e
+name: Contentstack Custom Article Page
+type: composition
+data: {}
+order: 400
+path: /articles/how-to-brew-a-proper-cuppa
+compositionId: 11fc8cf3-d528-4a64-87cd-59631698b9fb
+pathSegment: how-to-brew-a-proper-cuppa
+projectMapId: 89a0d435-3096-4e77-84f1-eda9ea8bc677

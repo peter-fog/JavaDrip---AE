@@ -1,0 +1,33 @@
+composition:
+  _name: Contentful Call to Action
+  _id: 57233447-b501-4b4d-aaa1-1c9dca436ef1
+  type: callToAction
+  parameters:
+    title:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Content Block Content/fields/title
+    description:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Content Block Content/fields/description
+  _dataResources:
+    Content Block Content:
+      type: contentfulContentBlock
+      variables:
+        entryIds: 79FtDSBLCOKqp4byFm21hY
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      title: 'yes'
+      buttonCopy: 'yes'
+      buttonLink: 'yes'
+      description: 'yes'
+created: '2023-04-13T07:31:18.151308+00:00'
+modified: '2023-04-13T07:31:51.870377+00:00'
+pattern: true

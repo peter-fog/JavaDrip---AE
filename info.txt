@@ -1,0 +1,6 @@
+repo: demo-v-next
+branch: main
+commit: 394c493373f79b25b9fd1b66e4a4ec8e5195ff9e
+project: commerce-algolia
+variant: content-ngm
+date/time: 5/17/2023, 12:13:09 PM

@@ -1,0 +1,34 @@
+id: contentstackArticle
+displayName: Article
+ttl: 30
+path: /content_types/${content_type_uid}/entries/${entry_uid}
+custom:
+  imagePath: thumbnail.url
+  searchFieldIds:
+    - title
+  allowContentTypeUids:
+    - article
+method: GET
+purgeKey: 208455ab-707b-48aa-8c4f-da6a527e54c5
+archetype: singleEntry
+variables:
+  query:
+    type: text
+    default: '{ "uid": { "$in": [ "" ] } }'
+    displayName: Query
+  entry_uid:
+    type: text
+    default: ''
+    displayName: Entry Uid
+  content_type_uid:
+    type: text
+    default: article
+    displayName: Entry Type
+parameters:
+  - key: query
+    value: ${query}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: contentstackDataSource
+allowedOnComponents: []

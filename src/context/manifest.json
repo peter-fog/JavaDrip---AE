@@ -1,0 +1,156 @@
+{
+  "project": {
+    "pz": {
+      "enr": {
+        "2": {
+          "cap": 100
+        },
+        "subCategory": {
+          "cap": 100
+        }
+      },
+      "sig": {
+        "beansCampaign": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": true,
+                  "op": "//",
+                  "rhs": "\\bbean\\b"
+                },
+                "subtype": "UTM_TAX",
+                "queryName": "utm_campaign",
+                "utm_mapper_taxonomy_id": "d2d0a7ae-2fb9-4739-a305-d14f3b74b4ff"
+              }
+            ]
+          }
+        },
+        "javadripSpecialtyLaunch": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": true,
+                  "op": "//",
+                  "rhs": "\\bspec\\b"
+                },
+                "subtype": "UTM_TAX",
+                "queryName": "utm_campaign",
+                "utm_mapper_taxonomy_id": "d2d0a7ae-2fb9-4739-a305-d14f3b74b4ff"
+              }
+            ]
+          }
+        },
+        "machineFreeShipping": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": true,
+                  "op": "//",
+                  "rhs": "\\bus\\b"
+                },
+                "subtype": "UTM_TAX",
+                "queryName": "utm_campaign",
+                "utm_mapper_taxonomy_id": "31a3013b-9c3d-41d9-9bf6-407f59beb386"
+              },
+              {
+                "type": "QS",
+                "match": {
+                  "cs": true,
+                  "op": "//",
+                  "rhs": "\\bmake\\b"
+                },
+                "subtype": "UTM_TAX",
+                "queryName": "utm_campaign",
+                "utm_mapper_taxonomy_id": "d2d0a7ae-2fb9-4739-a305-d14f3b74b4ff"
+              },
+              {
+                "type": "QS",
+                "match": {
+                  "cs": true,
+                  "op": "//",
+                  "rhs": "\\bQ423\\b"
+                },
+                "subtype": "UTM_TAX",
+                "queryName": "utm_campaign",
+                "utm_mapper_taxonomy_id": "6d584f59-74fe-47d5-b899-93ad49b90e25"
+              },
+              {
+                "type": "QS",
+                "match": {
+                  "cs": true,
+                  "op": "//",
+                  "rhs": "\\bfree\\b"
+                },
+                "subtype": "UTM_TAX",
+                "queryName": "utm_campaign",
+                "utm_mapper_taxonomy_id": "c9489178-5eff-4beb-9ce2-9fec76a7247c"
+              }
+            ]
+          }
+        },
+        "registeredForNewsletter": {
+          "str": 1,
+          "cap": 1,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "true"
+                },
+                "queryName": "registered"
+              }
+            ]
+          }
+        },
+        "visitorOnMobile": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "key": "aka-device-isMobile",
+                "type": "QK",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "true"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "test": {}
+  }
+}

@@ -1,0 +1,35 @@
+composition:
+  _name: Contentstack Call to Action
+  _id: b02b0614-dd3c-4be8-a9d7-55fa8828ad85
+  type: callToAction
+  parameters:
+    title:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Call to Action Content/entry/title
+    description:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Call to Action Content/entry/description
+  _dataResources:
+    Call to Action Content:
+      type: contentstackCallToAction
+      variables:
+        query: ''
+        entry_uid: bltc4c0fbd62e1b5386
+        content_type_uid: content_block
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      title: 'yes'
+      buttonCopy: 'yes'
+      buttonLink: 'yes'
+      description: 'yes'
+created: '2023-05-08T11:03:08.835779+00:00'
+modified: '2023-05-08T11:03:53.198798+00:00'
+pattern: true

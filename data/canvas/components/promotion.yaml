@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: promotion
+name: Promotion
+icon: >-
+  https://res.cloudinary.com/uniformdev/image/upload/v1683798528/vNext%20Demos/Baseline/canvas-preview/Promotion_e0jdrg.png
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+  - id: couponCode
+    name: Coupon code
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+  - id: icon
+    name: Icon
+    type: image
+    helpText: ''
+    typeConfig:
+      required: false
+  - id: backgroundImage
+    name: Background image
+    type: image
+    helpText: ''
+    typeConfig:
+      required: false
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-05-25T19:37:52.128602+00:00'
+updated: '2023-05-25T19:49:44.224705+00:00'

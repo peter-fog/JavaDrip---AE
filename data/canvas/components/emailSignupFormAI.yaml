@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: emailSignupFormAI
+name: Email Signup Form AI
+icon: >-
+  https://res.cloudinary.com/uniformdev/image/upload/v1683798615/vNext%20Demos/Baseline/canvas-preview/Email_Signup_Form_eiz699.png
+parameters:
+  - id: content
+    name: Content
+    type: ai-generated-hero
+    helpText: ''
+    typeConfig:
+      promptCta: >-
+        A few examples of an appeal to the user to provide their email to
+        receive
+      promptTitle: A short headline for the JavaDrip store with promotions
+      promptLinkText: An example of a link to a promotional page
+      promptDescription: A short text urging the user to enter their email for a discount coupon
+  - id: submitButtonText
+    name: Submit Button Text
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: backgroundImage
+    name: Background Image
+    type: image
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-05-25T19:34:29.965531+00:00'
+updated: '2023-05-25T19:49:43.25268+00:00'

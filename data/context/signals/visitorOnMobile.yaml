@@ -1,0 +1,16 @@
+id: visitorOnMobile
+name: Visitor on Mobile
+cap: 100
+crit:
+  op: '&'
+  type: G
+  clauses:
+    - key: aka-device-isMobile
+      type: QK
+      match:
+        cs: false
+        op: '='
+        rhs: 'true'
+dur: p
+description: ''
+str: 50

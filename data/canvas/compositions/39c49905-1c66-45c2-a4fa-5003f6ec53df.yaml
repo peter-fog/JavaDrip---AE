@@ -1,0 +1,76 @@
+composition:
+  _name: Contentful Articles List
+  _id: 39c49905-1c66-45c2-a4fa-5003f6ec53df
+  type: articlesList
+  parameters:
+    title:
+      type: text
+      value: Articles
+  slots:
+    items:
+      - _id: 8d872934-37c0-4700-8670-71b9598340cf
+        type: $loop
+        slots:
+          body:
+            - _id: fbcb5915-0cea-4d8e-a653-24bf7a5d7781
+              type: articleListItem
+              parameters:
+                slug:
+                  type: text
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content items Loop Item/fields/slug
+                title:
+                  type: text
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content items Loop Item/fields/title
+                content:
+                  type: json
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content items Loop Item/fields/content
+                thumbnail:
+                  type: image
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: >-
+                      /Articles Content items Loop
+                      Item/fields/thumbnail/fields/file/url
+                description:
+                  type: text
+                  value: unresolved
+                  connectedData:
+                    syntax: jptr
+                    pointer: /Articles Content items Loop Item/fields/description
+              _overridability:
+                parameters:
+                  slug: 'yes'
+                  title: 'yes'
+                  content: 'yes'
+                  thumbnail: 'yes'
+                  description: 'yes'
+        _dataResources:
+          Articles Content items Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: /Articles Content/items
+  _dataResources:
+    Articles Content:
+      type: contentfulArticles
+      variables:
+        limit: '48'
+        order: '-sys.updatedAt'
+        contentType: article
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      title: 'yes'
+created: '2023-04-13T09:09:56.074069+00:00'
+modified: '2023-04-13T09:11:49.834833+00:00'
+pattern: true

@@ -1,0 +1,31 @@
+composition:
+  _name: Contentful Article (Template)
+  _id: 6f01849c-098b-482d-9c1b-70931ce6ab3c
+  type: article
+  parameters:
+    title:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Article Content/fields/title
+    content:
+      type: json
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Article Content/fields/content
+  _dataResources:
+    Article Content:
+      type: contentfulArticle
+      variables:
+        entryIds: 5HSW6UJem5CCv4AjNJYYeq
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      title: 'yes'
+      content: 'yes'
+created: '2023-04-13T09:13:10.040382+00:00'
+modified: '2023-04-13T09:13:36.444602+00:00'
+pattern: true

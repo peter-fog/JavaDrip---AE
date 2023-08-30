@@ -1,0 +1,92 @@
+composition:
+  _name: Beans
+  _id: aa55e778-5167-4960-809c-e242ec0affc9
+  _slug: /shop/beans
+  type: page
+  parameters:
+    $enr:
+      type: $enr
+      value:
+        - cat: '2'
+          key: '2'
+          str: 10
+    pageMetaTitle:
+      type: text
+      value: Buy Beans
+    pageMetaDescription:
+      type: text
+      value: Buy Beans
+  slots:
+    content:
+      - _id: 73867f08-4c54-4fb1-810f-5a637d34f875
+        type: hero
+        _pattern: 5156915c-aaea-43a3-8cc6-3b0549d645c8
+        _dataResources:
+          Content Block Content:
+            type: contentfulContentBlock
+            variables:
+              entryIds: 7hFvsbIe4jd3j3JRpz8uFh
+      - _id: cd793155-3300-46b0-b03f-08952adb5dfa
+        type: algolia-instantSearch
+        slots:
+          widgets:
+            - _id: 22fd2669-721a-42a0-898d-405825cf5fa6
+              type: algolia-searchBox
+              parameters:
+                searchBoxParams:
+                  type: algolia-components
+                  value:
+                    searchBoxProps:
+                      placeholder: Search by keyword or product
+                      searchAsYouType: true
+            - _id: e22c1cff-fa14-4cdf-b7b7-f4630bffc641
+              type: sectionTwoColumns
+              slots:
+                leftContent:
+                  - _id: b92588a2-4520-4282-9c17-7d494f1d7857
+                    type: algolia-refinementList
+                    parameters:
+                      refinementListParams:
+                        type: algolia-components
+                        value:
+                          refinementListProps:
+                            limit: 10
+                            operator: and
+                            showMore: false
+                            attribute: subCategories
+                            searchable: false
+                            allowedIndex: products
+                            escapeFacetValues: true
+                rightContent:
+                  - _id: 2e43a526-ca62-4634-b961-10fa5d8deb75
+                    type: algolia-hits
+                    slots:
+                      hitComponent:
+                        - _id: 2eaff276-fc66-43c5-8e4e-57fac5fe2071
+                          type: algolia-hitProduct
+              parameters:
+                columnWidths:
+                  type: select
+                  value: 1/4 - 3/4
+                mobileItemsOrder:
+                  type: select
+                  value: order-first
+                verticalAlignment:
+                  type: select
+                  value: items-start
+        parameters:
+          rootCategory:
+            type: select
+            value: Beans
+          instantSearchParams:
+            type: algolia-components
+            value:
+              instantSearchProps:
+                indexName: products
+                stalledSearchDelay: 200
+  _overrides:
+    73867f08-4c54-4fb1-810f-5a637d34f875:
+      variant: centered
+created: '2023-04-12T17:15:05.722284+00:00'
+modified: '2023-05-18T21:39:26.001379+00:00'
+pattern: false

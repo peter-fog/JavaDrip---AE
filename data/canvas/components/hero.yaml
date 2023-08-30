@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: hero
+name: Hero
+icon: >-
+  https://res.cloudinary.com/uniformdev/image/upload/v1675163013/vNext%20Demos/Baseline/canvas-preview/Hero_z6ssj7.png
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: subtitle
+    name: Subtitle
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+  - id: buttonCopy
+    name: Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: buttonLink
+    name: Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: image
+    name: Image
+    type: image
+    helpText: ''
+    typeConfig:
+      required: true
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-01-20T14:40:14.444181+00:00'
+updated: '2023-05-25T19:49:43.247702+00:00'
+variants:
+  - id: centered
+    name: Centered

@@ -1,0 +1,94 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: promotionPage
+name: Promotion page
+icon: file-document
+parameters:
+  - id: pageMetaTitle
+    name: Page Meta Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: pageMetaDescription
+    name: Page Meta Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+  - id: hideFromNavigation
+    name: Hide From Navigation
+    type: checkbox
+    helpText: >-
+      Hide page from navigation. If you change this value, you must save the
+      composition before the change will be visible in Canvas.
+    typeConfig: null
+  - id: hideHeader
+    name: Hide Header
+    type: checkbox
+    helpText: Hide header on this page
+    typeConfig: null
+  - id: hideFooter
+    name: Hide Footer
+    type: checkbox
+    helpText: Hide footer on this page
+    typeConfig: null
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents:
+      - container
+      - $p:57233447-b501-4b4d-aaa1-1c9dca436ef1
+      - $p:b02b0614-dd3c-4be8-a9d7-55fa8828ad85
+      - emailSignupForm
+      - featuredProducts
+      - promotion
+      - sectionTwoColumns
+      - $personalization
+      - $p:b5f03387-e256-4f35-b256-b15cf95e10ad
+      - promotionAI
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+defaults:
+  type: promotionPage
+  slots:
+    content:
+      - type: container
+        slots:
+          content:
+            - type: emailSignupForm
+              parameters:
+                backgroundImage:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniformdev/image/upload/v1657906378/JavaDrip/misc/beans_ii926v.png
+                submitButtonText:
+                  type: text
+                  value: Register
+        parameters:
+          paddingTop:
+            type: select
+            value: Small
+          paddingBottom:
+            type: select
+            value: Small
+          backgroundType:
+            type: select
+            value: LightGray
+      - type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Featured Products
+          showAddToCart:
+            type: checkbox
+            value: true
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Promotion page
+canBeComposition: true
+created: '2023-05-25T19:37:52.210514+00:00'
+updated: '2023-05-25T19:49:44.217079+00:00'

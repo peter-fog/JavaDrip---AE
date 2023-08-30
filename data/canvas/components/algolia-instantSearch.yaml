@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: algolia-instantSearch
+name: Instant Search
+icon: search-found
+parameters:
+  - id: rootCategory
+    name: Root Category
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Coffee Makers
+          value: Coffee Makers
+        - text: Beans
+          value: Beans
+  - id: instantSearchParams
+    name: Instant Search Parameters
+    type: algolia-components
+    helpText: ''
+    typeConfig:
+      selectedComponent: Instant Search
+useTeamPermissions: true
+slots:
+  - id: widgets
+    name: Widgets
+    allowedComponents:
+      - algolia-searchBox
+      - algolia-refinementList
+      - algolia-hits
+      - sectionTwoColumns
+    inheritAllowedComponents: false
+canBeComposition: false
+created: '2023-05-25T19:34:30.699783+00:00'
+updated: '2023-05-25T19:49:42.721755+00:00'

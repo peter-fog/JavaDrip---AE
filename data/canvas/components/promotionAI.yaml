@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: promotionAI
+name: Promotion AI
+icon: >-
+  https://res.cloudinary.com/uniformdev/image/upload/v1683798528/vNext%20Demos/Baseline/canvas-preview/Promotion_e0jdrg.png
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: description
+    name: Description (AI)
+    type: ai-generated-text
+    helpText: ''
+    typeConfig:
+      buttonText: Generate Description
+      promptText: '{descriptioncms}'
+  - id: couponCode
+    name: Coupon code
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: icon
+    name: Icon
+    type: image
+    helpText: ''
+    typeConfig:
+      required: false
+  - id: backgroundImage
+    name: Background image
+    type: image
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: descriptioncms
+    name: Description (CMS)
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-05-25T19:37:52.132522+00:00'
+updated: '2023-05-25T19:49:44.22979+00:00'

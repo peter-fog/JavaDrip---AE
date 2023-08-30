@@ -1,0 +1,164 @@
+composition:
+  _name: Home
+  _id: c7831905-e8b8-4002-b127-1281326079c4
+  _slug: /
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Home Page
+    pageMetaDescription:
+      type: text
+      value: JavaDrip Home Page
+  slots:
+    content:
+      - _id: c226526d-9b00-449a-a8e9-cffe4192687a
+        type: $personalization
+        slots:
+          pz:
+            - _id: f1dbd580-7f96-4c70-85fb-7f3c14305a88
+              type: hero
+              _pattern: 5156915c-aaea-43a3-8cc6-3b0549d645c8
+              _dataResources:
+                Content Block Content:
+                  type: contentfulContentBlock
+                  variables:
+                    entryIds: 7hFvsbIe4jd3j3JRpz8uFh
+                    contentTypeId: contentBlock
+            - _id: ec750008-e0c2-4715-a994-11183e3e440b
+              type: hero
+              _pattern: 5156915c-aaea-43a3-8cc6-3b0549d645c8
+              _dataResources:
+                Content Block Content:
+                  type: contentfulContentBlock
+                  variables:
+                    entryIds: fb3Mzu5lE1DejGu0FuCMr
+        parameters:
+          trackingEventName:
+            type: text
+            value: Hero P13N
+      - _id: dae4052c-bdf7-4af9-969e-82cacb865751
+        type: callToAction
+        _pattern: 57233447-b501-4b4d-aaa1-1c9dca436ef1
+        _dataResources:
+          Content Block Content:
+            type: contentfulContentBlock
+            variables:
+              entryIds: OVbeIGBi6gEDK6scpmJI1
+      - _id: 5e8e36e3-894a-407a-b944-be9c5334743d
+        type: featuredProducts
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Our smart coffee machines
+          products:
+            type: algolia-record
+            value:
+              objectIDs:
+                - '117'
+                - '115'
+                - '116'
+              index_name: products
+          subTitle:
+            type: text
+            value: Coffee beans that predict what taste buds want next
+          buttonCopy:
+            type: text
+            value: See Coffee Makers
+          buttonLink:
+            type: link
+            value:
+              path: /shop/coffee-makers
+              nodeId: 0065505a-37c8-4a77-a66d-3ae7d414af6f
+              projectMapId: 89a0d435-3096-4e77-84f1-eda9ea8bc677
+          showAddToCart:
+            type: checkbox
+            value: true
+      - _id: f2f6b895-9c23-479d-a2fb-56cc3129c23f
+        type: recommendedProducts
+        variant: dark
+        parameters:
+          title:
+            type: text
+            value: Beans recommended products
+          products:
+            type: algolia-recommend
+            value:
+              index_name: products
+              recommendOptions:
+                objectId: '80'
+                maxRecommendations: 5
+      - _id: decba573-f739-4672-8375-3dcab00e049e
+        type: featuredProducts
+        variant: dark
+        parameters:
+          title:
+            type: text
+            value: Featured products just for you
+          products:
+            type: algolia-record
+            value:
+              objectIDs:
+                - '94'
+                - '81'
+                - '138'
+              index_name: products
+          showAddToCart:
+            type: checkbox
+            value: true
+  _dataResources:
+    Content Block Content:
+      type: contentfulContentBlock
+      variables:
+        entryIds: 4xtURgEvG7MxZ5IqTv6KXw
+        contentTypeId: contentBlock
+  _overrides:
+    dae4052c-bdf7-4af9-969e-82cacb865751:
+      parameters:
+        buttonCopy:
+          type: text
+          value: null
+    ec750008-e0c2-4715-a994-11183e3e440b:
+      parameters:
+        title:
+          type: text
+          value: See our coffee machines
+        buttonCopy:
+          type: text
+          value: See our coffee makers
+        buttonLink:
+          type: link
+          value:
+            path: /shop/coffee-makers
+            nodeId: 0065505a-37c8-4a77-a66d-3ae7d414af6f
+            projectMapId: 89a0d435-3096-4e77-84f1-eda9ea8bc677
+    f1dbd580-7f96-4c70-85fb-7f3c14305a88:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            op: '|'
+            crit:
+              - l: '2_2'
+                op: +
+              - l: beansCampaign
+                r: 0
+                op: '>'
+            name: 'Hero: Beans for all your brewing needs'
+        subtitle:
+          type: text
+          value: null
+        buttonCopy:
+          type: text
+          value: Shop now
+        buttonLink:
+          type: link
+          value:
+            path: /shop/beans
+            type: projectMapNode
+            nodeId: 8cfa6e61-1c65-477f-8b9a-fc3b1c57930b
+            projectMapId: 89a0d435-3096-4e77-84f1-eda9ea8bc677
+created: '2023-04-12T14:30:19.350576+00:00'
+modified: '2023-05-23T19:48:42.46636+00:00'
+pattern: false

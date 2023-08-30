@@ -1,0 +1,34 @@
+id: contentstackCallToAction
+displayName: Call to Action
+ttl: 30
+path: /content_types/${content_type_uid}/entries/${entry_uid}
+custom:
+  customQuery: '{"tags": "call to action"}'
+  searchFieldIds:
+    - title
+  allowContentTypeUids:
+    - content_block
+method: GET
+purgeKey: 3cd35c2a-c9c9-469b-b7a9-11d37d4568a8
+archetype: singleEntry
+variables:
+  query:
+    type: text
+    default: '{ "uid": { "$in": [ "" ] } }'
+    displayName: Query
+  entry_uid:
+    type: text
+    default: ''
+    displayName: Entry Uid
+  content_type_uid:
+    type: text
+    default: content_block
+    displayName: Entry Type
+parameters:
+  - key: query
+    value: ${query}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: contentstackDataSource
+allowedOnComponents: []

@@ -1,0 +1,33 @@
+composition:
+  _name: Contentstack Article (Template)
+  _id: d8a12766-79a3-47cd-966e-8c398faa4470
+  type: article
+  parameters:
+    title:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Article Content/entry/title
+    content:
+      type: json
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Article Content/entry/content
+  _dataResources:
+    Article Content:
+      type: contentstackArticle
+      variables:
+        query: ''
+        entry_uid: blt541e8b3cc90d5224
+        content_type_uid: article
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      title: 'yes'
+      content: 'yes'
+created: '2023-05-08T11:00:00.78924+00:00'
+modified: '2023-05-08T11:01:01.459307+00:00'
+pattern: true

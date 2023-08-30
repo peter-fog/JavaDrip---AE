@@ -1,0 +1,35 @@
+id: contentstackHero
+displayName: Hero
+ttl: 30
+path: /content_types/${content_type_uid}/entries/${entry_uid}
+custom:
+  imagePath: image
+  customQuery: '{"tags": "hero"}'
+  searchFieldIds:
+    - title
+  allowContentTypeUids:
+    - content_block
+method: GET
+purgeKey: 14c600e0-369f-43ab-9f8b-c0925ba5ffd4
+archetype: singleEntry
+variables:
+  query:
+    type: text
+    default: '{ "uid": { "$in": [ "" ] } }'
+    displayName: Query
+  entry_uid:
+    type: text
+    default: ''
+    displayName: Entry Uid
+  content_type_uid:
+    type: text
+    default: content_block
+    displayName: Entry Type
+parameters:
+  - key: query
+    value: ${query}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: contentstackDataSource
+allowedOnComponents: []

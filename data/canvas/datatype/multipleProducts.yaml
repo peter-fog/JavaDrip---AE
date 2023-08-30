@@ -1,0 +1,27 @@
+id: multipleProducts
+displayName: Multiple Products
+ttl: 30
+body: ${body}
+path: ${path}
+custom:
+  facetName: ''
+  imagePath: thumbnailImage
+  indexName: products
+  displayField: name
+method: POST
+purgeKey: 79d456fe-da88-4677-9889-fefa9d682613
+archetype: multipleEntry
+variables:
+  body:
+    type: text
+    default: '{}'
+    displayName: Body
+  path:
+    type: text
+    default: /*/objects
+    displayName: Path
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: algolia
+allowedOnComponents: []

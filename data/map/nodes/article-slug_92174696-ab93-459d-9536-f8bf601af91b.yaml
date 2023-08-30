@@ -1,0 +1,9 @@
+id: 92174696-ab93-459d-9536-f8bf601af91b
+name: '*'
+type: composition
+data: {}
+order: 200
+path: /articles/article-slug
+compositionId: ab46c63d-7ec2-404b-81b4-073af47cfe08
+pathSegment: article-slug
+projectMapId: 89a0d435-3096-4e77-84f1-eda9ea8bc677

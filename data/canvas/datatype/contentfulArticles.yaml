@@ -1,0 +1,49 @@
+id: contentfulArticles
+displayName: Articles
+ttl: 30
+path: /entries
+custom:
+  include: 1
+  imagePath: thumbnail
+  allowContentTypeIds:
+    - article
+method: GET
+purgeKey: 8c883757-1b8f-4ee7-a9f7-c10d29cd54c6
+archetype: queryEntry
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  order:
+    type: text
+    default: ''
+    displayName: Order
+  keyword:
+    type: text
+    default: ''
+    displayName: Search Text
+  entryIds:
+    type: text
+    default: ''
+    displayName: Entry Ids
+  contentTypeId:
+    type: text
+    default: article
+    displayName: Content Type
+parameters:
+  - key: include
+    value: '1'
+  - key: order
+    value: ${order}
+  - key: query
+    value: ${keyword}
+  - key: limit
+    value: ${limit}
+  - key: content_type
+    value: ${contentTypeId}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: contentfulDataSource
+allowedOnComponents: []

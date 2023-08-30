@@ -1,0 +1,37 @@
+composition:
+  _name: Contentstack Custom Article Page
+  _id: 11fc8cf3-d528-4a64-87cd-59631698b9fb
+  _slug: how-to-brew-a-proper-cuppa
+  type: page
+  parameters:
+    pageMetaTitle:
+      type: text
+      value: Contentstack Custom Article Page
+    hideFromNavigation:
+      type: checkbox
+      value: true
+  slots:
+    content:
+      - _id: a736a5af-279c-4420-806b-23b4adf11139
+        type: hero
+        _pattern: b0454911-b70d-4dff-8304-ab82f09153c6
+        _dataResources:
+          Hero Content:
+            type: contentstackHero
+            variables:
+              query: ''
+              entry_uid: blt7175aad1602e4605
+              content_type_uid: content_block
+      - _id: c3a890ab-7861-4911-b10c-3384ea394158
+        type: article
+        _pattern: d8a12766-79a3-47cd-966e-8c398faa4470
+        _dataResources:
+          Article Content:
+            type: contentstackArticle
+            variables:
+              query: ''
+              entry_uid: blt324d69f885455115
+              content_type_uid: article
+created: '2023-05-08T14:42:53.044389+00:00'
+modified: '2023-05-11T08:19:57.426538+00:00'
+pattern: false
